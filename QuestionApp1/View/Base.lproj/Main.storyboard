@@ -56,7 +56,7 @@
                     </view>
                     <connections>
                         <outlet property="imageView" destination="XHN-uK-fCb" id="iQG-by-VDc"/>
-                        <outlet property="maxScoreLabek" destination="APM-er-Eif" id="mAB-DQ-WWp"/>
+                        <outlet property="maxScoreLabel" destination="APM-er-Eif" id="pEO-Ip-iT7"/>
                         <segue destination="Zth-gh-aud" kind="presentation" identifier="next" modalPresentationStyle="fullScreen" id="zHN-Oz-bdf"/>
                     </connections>
                 </viewController>

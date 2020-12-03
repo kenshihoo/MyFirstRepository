@@ -19,6 +19,9 @@
 		E35FC824257526630089616A /* maruSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E35FC823257526630089616A /* maruSound.mp3 */; };
 		E35FC82C257528690089616A /* NextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E35FC82B257528690089616A /* NextViewController.swift */; };
 		E3F414AA2577872100281825 /* SoundFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F414A92577872100281825 /* SoundFile.swift */; };
+		E3F414B62577DB5600281825 /* WithoutMp3Sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F414B52577DB5600281825 /* WithoutMp3Sound.swift */; };
+		E3F414BB2577EA1E00281825 /* ChangeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F414BA2577EA1E00281825 /* ChangeColor.swift */; };
+		E3F414BF2577F1AA00281825 /* batsuSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E3F414BE2577F1AA00281825 /* batsuSound.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +39,9 @@
 		E35FC823257526630089616A /* maruSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = maruSound.mp3; path = "../../../Resources/iOS14画像集/QuestionApp1素材/maruSound.mp3"; sourceTree = "<group>"; };
 		E35FC82B257528690089616A /* NextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextViewController.swift; sourceTree = "<group>"; };
 		E3F414A92577872100281825 /* SoundFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundFile.swift; sourceTree = "<group>"; };
+		E3F414B52577DB5600281825 /* WithoutMp3Sound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithoutMp3Sound.swift; sourceTree = "<group>"; };
+		E3F414BA2577EA1E00281825 /* ChangeColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeColor.swift; sourceTree = "<group>"; };
+		E3F414BE2577F1AA00281825 /* batsuSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = batsuSound.mp3; path = "../../../Resources/iOS14画像集/QuestionApp1素材/batsuSound.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +79,7 @@
 				E35FC829257527330089616A /* Controller */,
 				E35FC8142573D7D10089616A /* LaunchScreen.storyboard */,
 				E35FC8172573D7D10089616A /* Info.plist */,
+				E3F414BE2577F1AA00281825 /* batsuSound.mp3 */,
 				E35FC8202575265C0089616A /* sound.mp3 */,
 				E35FC823257526630089616A /* maruSound.mp3 */,
 			);
@@ -85,6 +92,8 @@
 				E34BD237257548D1007DF406 /* ImagesModel.swift */,
 				E34BD23A25754E31007DF406 /* ImagesList.swift */,
 				E3F414A92577872100281825 /* SoundFile.swift */,
+				E3F414B52577DB5600281825 /* WithoutMp3Sound.swift */,
+				E3F414BA2577EA1E00281825 /* ChangeColor.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -170,6 +179,7 @@
 				E35FC824257526630089616A /* maruSound.mp3 in Resources */,
 				E35FC8162573D7D10089616A /* LaunchScreen.storyboard in Resources */,
 				E35FC8132573D7D10089616A /* Assets.xcassets in Resources */,
+				E3F414BF2577F1AA00281825 /* batsuSound.mp3 in Resources */,
 				E35FC8112573D7CF0089616A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -184,9 +194,11 @@
 				E35FC80E2573D7CF0089616A /* ViewController.swift in Sources */,
 				E3F414AA2577872100281825 /* SoundFile.swift in Sources */,
 				E35FC82C257528690089616A /* NextViewController.swift in Sources */,
+				E3F414B62577DB5600281825 /* WithoutMp3Sound.swift in Sources */,
 				E35FC80A2573D7CF0089616A /* AppDelegate.swift in Sources */,
 				E35FC80C2573D7CF0089616A /* SceneDelegate.swift in Sources */,
 				E34BD238257548D1007DF406 /* ImagesModel.swift in Sources */,
+				E3F414BB2577EA1E00281825 /* ChangeColor.swift in Sources */,
 				E34BD23B25754E31007DF406 /* ImagesList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

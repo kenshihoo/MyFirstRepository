@@ -27,10 +27,27 @@ class ViewController: UIViewController,scoreMonitoringDelegate {
     func nowScore(score: Int) {
         maxScoreLabel.text = String(score)
     }
+    //SoundFile内のsoundFileクラスを使うために変数化
+    var sound = soundFile()
+    
+    //ChangeColor内のchangeColorクラスを使うために変数化
+    var change = changeColor()
+    
+    var gradientBackLayer = CAGradientLayer()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        //changeを使って背景色を変える
+        gradientBackLayer = change.changeBackColor(topR: 0.07, topG: 0.13, topB: 0.26, topAlpha: 1.0, bottomR: 0.54, bottomG: 0.74, bottomB: 0.74, bottomAlpha: 1.0)
+        gradientBackLayer.frame = view.bounds
+        view.layer.insertSublayer(gradientBackLayer, at: 0)
+        
+        
+        //imageViewのかどを丸くする
+        imageView.layer.cornerRadius = 20.0
+        
     }
     
     //クラスの継承に必要な呪文(モーダルでViewControllerに戻ってきたときに使う)
@@ -53,12 +70,18 @@ class ViewController: UIViewController,scoreMonitoringDelegate {
     }
     
     @IBAction func answer(_ sender: Any) {
-//        丸ボタン(タグNo.1)が押された場合の処理
+        //丸ボタン(タグNo.1)が押された場合の処理
         if (sender as AnyObject).tag == 1{
+            //ボタンが押された際の効果音を流す
+            sound.playSound(fileName: "maruSound", extensionName: "mp3")
+            //正誤判定に用いるpickedAnswerにtrueを代入
             pickedAnswer = true
         }
 //        バツボタン(タグNo.2)が押された場合の処理
         else if (sender as AnyObject).tag == 2{
+            //ボタンが押された際の効果音を流す
+            sound.playSound(fileName: "batsuSound", extensionName: "mp3")
+            //正誤判定に用いるpickedAnswerにfalseを代入
             pickedAnswer = false
         }
         //回答が正解かどうかを判断(pickedAnswerとImagesListのCorrectOrNotを用いて判断)
@@ -67,7 +90,7 @@ class ViewController: UIViewController,scoreMonitoringDelegate {
     }
     
     func check(){
-        let correctAnswer = imagesList.list[0].answer
+        let correctAnswer = imagesList.list[questionNumber].answer
         if correctAnswer == pickedAnswer{
             print("正解")
             correctCount = correctCount + 1
@@ -88,8 +111,13 @@ class ViewController: UIViewController,scoreMonitoringDelegate {
             //画面遷移する呪文
             performSegue(withIdentifier:"next", sender: nil)
         }
-        
     }
+    
+    func nowScore(){
+        //最高得点だったときの効果音を流す
+        sound.playSound(fileName: "sound", extensionName: "mp3")
+    }
+    
 //NextViewControllerに値を渡すための呪文
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "next"{

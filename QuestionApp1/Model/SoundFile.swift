@@ -10,16 +10,16 @@ import Foundation
 import AVFoundation
 
 class soundFile{
-    var playyer:AVAudioPlayer?
+    var player:AVAudioPlayer?
     
-    func palySound(fileName:String,extensionName:String){
+    func playSound(fileName:String,extensionName:String){
         //再生する音声を指定する
         let soundURL = Bundle.main.url(forResource: fileName, withExtension: extensionName)
 //DoCatch文(通常Do内の動きをするが、エラーが出た場合にはCatch内の挙動をする)
         do{
             //音声を鳴らす
-            playyer = try AVAudioPlayer(contentsOf: soundURL!)
-            playyer?.play()
+            player = try AVAudioPlayer(contentsOf: soundURL!)
+            player?.play()
         }
         catch{
             print("エラーです")
